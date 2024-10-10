@@ -1,0 +1,20 @@
+<div class="auth-container">
+    <h2>ავტორიზაცია</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="email">ელ. ფოსტა</label>
+            <input type="email" formControlName="Email" placeholder="შეიყვანეთ ელ. ფოსტა"
+                class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="password">პაროლი</label>
+            <input type="password" formControlName="Password" placeholder="შეიყვანეთ პაროლი"
+                class="form-control">
+        </div>
+        @if (errorMessage) {
+            <div>{{errorMessage}}</div>
+        }
+        <button type="submit" class="btn btn-primary">შესვლა</button>
+    </form>
+</div>

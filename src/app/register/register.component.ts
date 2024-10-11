@@ -36,14 +36,6 @@ export class RegisterComponent {
           this.errorMessage = err.code
         }
       });
-  }
-
-
-  // onSubmit() {
-  //   const rawForm = this.form.getRawValue()
-
-  //   this.authService.register(rawForm.email, rawForm.Username, rawForm.password).subscribe(() => {
-  //     this.router.navigateByUrl('/')
-  //   })
-  // }
+  } 
+ 
 }

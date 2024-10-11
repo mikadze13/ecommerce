@@ -8,21 +8,21 @@ import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,RouterOutlet],
+  imports: [ReactiveFormsModule, RouterOutlet],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
   constructor(private router: Router) { }
-  errorMessage:string | null = null;
+  errorMessage: string | null = null;
   authService = inject(AuthService)
-  form = new FormGroup({ 
+  form = new FormGroup({
     Email: new FormControl('', [Validators.required]),
     Password: new FormControl('', [Validators.required]),
   });
   onSubmit() {
     const rawForm = this.form.getRawValue();
-    const email = rawForm.Email ?? ''; 
+    const email = rawForm.Email ?? '';
     const password = rawForm.Password ?? '';
 
     this.authService.login(email, password).subscribe(
@@ -30,9 +30,15 @@ export class LoginComponent {
         next: () => {
           this.router.navigateByUrl('/home');
         },
-        error:(err)=>{
+        error: (err) => {
           this.errorMessage = err.code
         }
       });
+  }
+
+  signInWithGoogle(){
+    this.authService.signInWithGoogle().subscribe(()=>{ 
+      this.router.navigate(['/home']); 
+    })
   }
 }

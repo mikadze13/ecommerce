@@ -93,9 +93,8 @@
   <a [routerLink]="'/login'">Login</a><br>
   <a [routerLink]="'/register'">Register</a>
 </div> -->
-<div>
-  <a routerLink="/login" ariaCurrentWhenActive="page">Login</a><br>
-  <a routerLink="/register" ariaCurrentWhenActive="page">Register</a>
-</div>
-<a routerLink="/home">home</a>
+<div class="Btn_main__cont">
+  <a routerLink="/login" ariaCurrentWhenActive="page" class="Login_btn">Login</a><br>
+  <a routerLink="/register" ariaCurrentWhenActive="page" class="Register_btn">Register</a>
+</div> 
 <router-outlet></router-outlet>

@@ -1,11 +1,9 @@
-.auth-container {
+.auth-container { 
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 20px; 
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+ }
 
 .auth-container h2 {
     text-align: center;
@@ -24,7 +22,8 @@
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 4px; 
+    box-sizing: border-box 
 }
 
 .auth-container button {
@@ -41,4 +40,10 @@
 .auth-container .alternative-auth {
     text-align: center;
     margin-top: 10px;
+}
+::ng-deep .mat-typography{
+    width: 100%;
+}
+::ng-deep .mat-typography .auth-container{
+    width: 500px;  
 }

@@ -1,22 +1,25 @@
-<div class="auth-container">
-    <h2>რეგისტრაცია</h2>
-    <form [formGroup]="form"  (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="name">სახელი</label>
-            <input type="text" placeholder="შეიყვანეთ სახელი" formControlName="Username" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="email">ელ.ფოსტა</label>
-            <input type="email" required placeholder="შეიყვანეთ მეილი" formControlName="email" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="password">პაროლი</label>
-            <input type="password" required placeholder="შეიყვანეთ პაროლი" formControlName="password" class="form-control">
-        </div>
-        @if(errorMessage){
+<mat-dialog-content class="mat-typography">
+    <div class="auth-container">
+        <h2>რეგისტრაცია</h2>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">სახელი</label>
+                <input type="text" placeholder="შეიყვანეთ სახელი" formControlName="Username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">ელ.ფოსტა</label>
+                <input type="email" required placeholder="შეიყვანეთ მეილი" formControlName="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">პაროლი</label>
+                <input type="password" required placeholder="შეიყვანეთ პაროლი" formControlName="password"
+                    class="form-control">
+            </div>
+            @if(errorMessage){
             <div>{{errorMessage}}</div>
-        } 
-        <button type="submit" class="btn btn-primary">რეგისტრაცია</button>
-    </form>
+            }
+            <button type="submit" class="btn btn-primary">რეგისტრაცია</button>
+        </form>
 
-</div>
+    </div>
+</mat-dialog-content>

@@ -1,24 +1,22 @@
-<div class="auth-container">
-    <h2>ავტორიზაცია</h2>
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="email">ელ. ფოსტა</label>
-            <input type="email" formControlName="Email" placeholder="შეიყვანეთ ელ. ფოსტა"
-                class="form-control">
-        </div>
+<mat-dialog-content class="mat-typography"> 
+    <div class="auth-container">
+        <h2>ავტორიზაცია</h2>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email">ელ. ფოსტა</label>
+                <input type="email" formControlName="Email" placeholder="შეიყვანეთ ელ. ფოსტა" class="form-control">
+            </div>
 
-        <div class="form-group">
-            <label for="password">პაროლი</label>
-            <input type="password" formControlName="Password" placeholder="შეიყვანეთ პაროლი"
-                class="form-control">
-        </div>
-         
-        @if (errorMessage) {
+            <div class="form-group">
+                <label for="password">პაროლი</label>
+                <input type="password" formControlName="Password" placeholder="შეიყვანეთ პაროლი" class="form-control">
+            </div>
+
+            @if (errorMessage) {
             <div>{{errorMessage}}</div>
-        }
-        <button (click)="signInWithGoogle()" style="margin-bottom: 10px;">Sign in with Google</button>
-        <button type="submit" class="btn btn-primary">შესვლა</button>
-    </form>
-</div>
- 
-
+            }
+            <button (click)="signInWithGoogle()" style="margin-bottom: 10px;">Sign in with Google</button>
+            <button type="submit" class="btn btn-primary">შესვლა</button>
+        </form>
+    </div>
+</mat-dialog-content>

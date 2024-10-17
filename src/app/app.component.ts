@@ -5,6 +5,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { FilterContainerComponent } from "./filter-container/filter-container.component";
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,7 +14,9 @@ import { RegisterComponent } from './register/register.component';
     RouterOutlet,
     RouterLink,
     HttpClientModule,
-    MatDialogModule],
+    MatDialogModule,
+    FilterContainerComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

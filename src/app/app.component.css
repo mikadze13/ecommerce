@@ -1,11 +1,12 @@
 .Btn_main__cont{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     background-color: rgba(237, 235, 235, 0.74);
 
     position: relative;
     top: auto;
-    width: auto;
+    padding: 0 5%;
     z-index: 11;
     background-color: rgba(237, 235, 235, 0.74);
     backdrop-filter: blur(10px);

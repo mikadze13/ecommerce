@@ -5,6 +5,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { routes } from './app.routes';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBbMaxfR1yzwf5uO-8wq6CZlZQbZ7mRQqw",
@@ -23,6 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideAnimationsAsync(),
     provideFirebaseApp(() => initializeApp(firebaseConfig)),  // No need to wrap this in importProvidersFrom
-    provideAuth(() => getAuth())  // Same here, add it directly
+    provideAuth(() => getAuth()),  // Same here, add it directly
+    provideHttpClient(withFetch())
   ]
 };

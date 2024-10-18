@@ -1,0 +1,7 @@
+:host ::ng-deep .p-carousel .p-carousel-item {
+  height: 400px; /* ან თუნდაც რაც გინდა */
+  width: 600px !important;
+}
+:host ::ng-deep .p-carousel .p-carousel-item img {
+  height: 400px; /* ან თუნდაც რაც გინდა */
+}

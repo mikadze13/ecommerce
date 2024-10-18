@@ -6,13 +6,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { AuthGuardService } from './auth-guard.service';
 import { HomeComponent } from './home/home.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @NgModule({
   declarations: [ 
   ],
   imports: [ 
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [ AuthGuardService],
 })
 export class AppModule { }
